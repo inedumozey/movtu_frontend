@@ -31,7 +31,6 @@ export default function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [cPassword, setCpassword] = useState("");
-    const [phone, setPhone] = useState("");
     const [verificationCode, setVerificationCode] = useState("");
     const [showVerificationField, setShowVerificationField] = useState(false);
 
@@ -60,7 +59,6 @@ export default function Signup() {
             setEmail("");
             setPassword("");
             setCpassword("");
-            setPhone("");
             setVerificationCode("");
             setToken('')
 
@@ -113,8 +111,8 @@ export default function Signup() {
     }
 
     useEffect(() => {
-        email && password && cPassword && phone ? setShowVerificationField(true) : setShowVerificationField(false)
-    }, [email, password, cPassword, phone])
+        email && password && cPassword ? setShowVerificationField(true) : setShowVerificationField(false)
+    }, [email, password, cPassword])
 
     return (
 
@@ -174,18 +172,6 @@ export default function Signup() {
                         <InputIcon onClick={() => setShowCpassword(!showCpassword)} right="0" left="">
                             {showCpassword ? <VisibilityOffRoundedIcon className='icon' /> : <RemoveRedEyeRoundedIcon className='icon' />}
                         </InputIcon>
-                    </InputWrapper>
-
-                    <InputWrapper>
-                        <InputIcon right="" left="0">
-                            <LocalPhoneIcon className='icon' />
-                        </InputIcon>
-                        <input
-                            type="number"
-                            value={phone || ''}
-                            placeholder="Phone Number"
-                            onInput={(e) => setPhone(e.target.value)}
-                        />
                     </InputWrapper>
                     {
                         showVerificationField ?
