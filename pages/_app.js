@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
     card: toggleState ? "var(--card-lighttheme)" : 'var(--card-darktheme)',
     btn: toggleState ? "var(--btn-lighttheme)" : 'var(--btn-darktheme)',
 
-    pri_color: 'rgb(29, 207, 159)',
+    pri_color: 'var(--pri_color)',
 
     lg_padding: '40px',
     md_padding: '25px',

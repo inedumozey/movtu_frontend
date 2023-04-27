@@ -27,7 +27,7 @@ const ScrollBar = () => css`
 
 const GlobalStyle = createGlobalStyle`
     :root{
-
+      pri_color: rgb(29, 207, 159);
     }
 
     *{

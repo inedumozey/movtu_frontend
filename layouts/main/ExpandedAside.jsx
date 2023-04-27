@@ -31,7 +31,7 @@ export default function ExpandedAside() {
 
                 <div className="amount">
                     {
-                        !profile ? <Spinner /> :
+                        !profile ? <Spinner color="#fff" /> :
                             <>
                                 <span
                                     style={{ cursor: 'default' }}
@@ -64,7 +64,7 @@ export default function ExpandedAside() {
 
                 <div className="name">
                     {
-                        !profile ? <Spinner /> :
+                        !profile ? <Spinner color="#fff" /> :
                             <Link style={{ textDecoration: 'none' }} onClick={() => setShowsidedrawal(false)} href="/dashboard/profile" >
                                 <div className="ellipsis">{profile.username ? profile.username : profile.email}</div>
                                 <div className="role">

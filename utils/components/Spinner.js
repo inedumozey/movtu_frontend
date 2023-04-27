@@ -1,6 +1,6 @@
 import Spinner_ from 'react-spinner-material';
 
-function Spinner({ size, color = "#fff" }) {
+function Spinner({ size, color = "var(--pri_color)" }) {
 
   return (
     <Spinner_
