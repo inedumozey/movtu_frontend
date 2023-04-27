@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle, css } from "styled-components";
+const pri_color = "rgb(29, 207, 159)";
 
 const ScrollBar = () => css`
   &::-webkit-scrollbar-thumb {
@@ -27,7 +28,7 @@ const ScrollBar = () => css`
 
 const GlobalStyle = createGlobalStyle`
     :root{
-      pri_color: rgb(29, 207, 159);
+      --pri_color: ${pri_color};
     }
 
     *{
